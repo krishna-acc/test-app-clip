@@ -1,11 +1,27 @@
 {
-  "applinks": {
-    "apps": [],
-    "details": [
-      {
-        "appID": "E8DED973AB.com.usbank.digitalcardenablement.appclip",
-        "paths": [ "test" ]
-      }
-    ]
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "E8DED973AB.com.usbank.digitalcardenablement" ],
+             "components": [
+               {
+                  "/": “/test/*”,
+                  "comment": "Matches any URL with a path that starts with /test/.”
+               },
+               {
+                  "/": “/partner/brand/*",
+                  "exclude": true,
+                  "comment": "Matches any URL with a path that starts with /partner/brand/ and instructs the system not to open it as a universal link."
+               }
+             ]
+           }
+       ]
+   },
+   "webcredentials": {
+      "apps": [ "E8DED973AB.com.usbank.digitalcardenablement" ]
+   },
+
+  "appclips": {
+      "apps": ["E8DED973AB.com.usbank.digitalcardenablement.appclip"]
   }
 }
